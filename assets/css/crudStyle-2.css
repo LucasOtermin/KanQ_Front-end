@@ -1,0 +1,479 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    cursor: url("../media/icons/cursorVwhite.png"), auto;
+}
+
+header
+{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    padding: 25px;
+}
+
+header > a
+{
+
+    background:white;
+    padding: 5px 20px;
+    margin: 2px 10px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: rgb(88, 114, 230);;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header > a:hover
+{
+    cursor: pointer;
+    opacity: .7;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    background: url(../media/images/KanQ1-Background.jpg);
+    background-size:auto;
+    object-fit:cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+body::before
+{
+    content: "";
+    width: 100vw;
+    height: 200%;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.65),rgba(111, 33, 255, 0.65));
+    z-index: -50;  
+}
+
+.KanQTittle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    width: 20svh;
+    height: 20svh;
+    text-shadow: 1px 1px 10px black;
+    z-index: 15;
+    font-size: 4rem;
+    color: white;
+    transform: translateY(100px);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-it
+{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.pencil-img
+{
+    position: absolute;
+    width: 110px;
+    filter: drop-shadow(1px 1px 3px black);
+    transform: rotate(-15deg) translate(75px,50px);
+    user-select: none;
+}
+
+.paperOBJ
+{
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: rotate(-20deg) translate(-50px,30px);
+    
+    filter: drop-shadow(1px 1px 3px black);
+    /*filter: hue-rotate(0);*/
+    /*filter: hue-rotate(110deg);*/
+    /*filter: hue-rotate(220deg);*/
+    /*filter: hue-rotate(290deg);*/
+ 
+}
+
+.paperOBJ > .paperOBJ_1
+{
+    width: 100px;
+    height: 100px;
+    background: rgb(253, 129, 129);
+    position: absolute;
+    z-index: 3;
+}
+
+.paperOBJ > .paperOBJ_2
+{
+    width: 100px;
+    height: 100px;
+    background: wheat;
+    position: absolute;
+    transform: translate(3px,3px);
+    z-index: 2;
+}
+
+.paperOBJ > .paperOBJ_3
+{
+    width: 100px;
+    height: 20px;
+    background: rgb(194, 89, 89);
+    position: absolute;
+    z-index: 4;
+}
+
+.formDialog
+{
+    background: transparent;
+    width: 80%;
+    height: 100%;
+    border: none;
+    padding: 25px;
+}
+
+.formLabel
+{
+    width: 100%;
+    background:rgb(88, 114, 230);
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.formBody
+{
+    background: rgb(58, 75, 153);
+    border: 3px solid white;
+    padding: 25px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+}
+
+.formBody > h1
+{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+    background:rgb(88, 114, 230);
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+
+}
+
+.inputForm
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputClass
+{
+    background-color: transparent;
+    font-family: sans-serif;
+}
+
+.formDescription
+{
+    resize: none;
+    background: none;
+    border: none;
+    font-family: sans-serif;
+}
+
+.formDialogChild
+{
+    transform: translateY(5px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plusButton-1
+{
+    background:white;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(88, 114, 230);
+    /*text-shadow: 2px 2px 6px black;*/
+}
+
+.plusButton-1:hover
+{
+    transition: .15s;
+    background:rgb(116, 230, 88);
+    outline: 1px solid white;
+    color: white;
+}
+
+.plusButton > i
+{
+    color: wheat;
+}
+
+.cards-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*outline: 2px solid blue;*/
+    padding: 5px;
+
+}
+
+.cards-container-child
+{
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    /*outline: 2px solid red;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5px;
+    margin: 10px 10px;
+    border: none;
+}
+
+.pin
+{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: rgb(238, 200, 32);
+    border-radius: 50%;
+    margin: auto;
+    transform: translate(180px,-15px);
+    filter: drop-shadow(2px 2px 2px rgb(88, 74, 8));
+    z-index: 555;
+}
+
+.pin-child
+{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background: rgb(238, 200, 32);
+    border-radius: 50%;
+    margin: auto;
+    filter: drop-shadow(3px 3px 3px rgb(88, 74, 8));
+    transform: translate(5px,-2px);
+    border-top: 3px solid white;
+}
+
+.pin-child-2
+{
+    height: 15px;
+    width: 10px;
+    position: absolute;
+    background: transparent;
+    border-radius: 50%;
+    margin: auto;
+    transform: translate(5px,18px);
+    border-bottom: 3px double rgb(160, 160, 160);
+}
+
+.card-body-own
+{
+    padding: 0;
+    margin: 0;
+    /*background: rgb(253, 129, 129);*/
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.card-body-own:hover
+{
+    transition: .15s;
+    /*outline: 2px dotted white;*/
+    opacity: .8;
+}
+
+.btn
+{
+    margin: 0 25px;
+}
+
+.card-own
+{
+    margin: 15px 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    filter: drop-shadow(3px 3px 6px black);
+}
+
+.post-it-card-color-part
+{
+    /*background: rgb(194, 89, 89);*/
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+}
+.post-it-card-color-part > h5
+{
+    color: rgb(240, 240, 240);
+    font-family: cursive;
+    padding: 5px;
+    text-shadow: 2px 2px 6px black;
+    backdrop-filter: brightness(75%);
+    width: 100%;
+    height: 100%;
+}
+
+.card-text-own
+{
+    padding: 15px;
+    height: calc(2/4 *100%);
+    font-family:cursive;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.form::backdrop
+{
+    background: rgba(5,5,8,0.75);
+}
+i:hover
+{
+    cursor: pointer;
+}
+.closeButton
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 100px;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: black;
+    border: none;
+    font-size: small;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+.closeButton:hover
+{
+    transition: .15s;
+    background: rgb(255, 36, 72);
+    color: white;
+}
+
+.card-data-container-own
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.cards-buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+footer
+{
+
+    width: 100%;
+    position:fixed;
+
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    height: 45px;
+    padding: 20px;
+    text-align: center;
+
+    color: white;
+    bottom: 0;
+
+    text-shadow: 2px 2px 6px black;
+}
+
+.light-red
+{
+    background: rgb(253, 129, 129);
+}
+ 
+.light-green
+{
+    background: rgb(129, 253, 135);
+}
+ 
+.light-blue
+{
+    background: rgb(129, 137, 253);
+}
+
+.light-yellow
+{
+    background: rgb(250, 219, 83);
+}
+
